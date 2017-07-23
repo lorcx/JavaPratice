@@ -1,0 +1,23 @@
+<?xml.xml version="1.0" encoding="UTF-8"?>
+<tt:书架 xmlns:tt="http://www.example.org/demo"
+     xmlns:dd="http://www.w3.org/2001/XMLSchema-instance"
+	 dd:schemaLocation="http://www.example.org/demo demo.xsd"
+	>
+	<tt:书>
+		<tt:书名>java xml开发</tt:书名>
+		<tt:作者>lx</tt:作者>
+		<tt:售价>9999</tt:售价>
+	</tt:书>
+	<!-- 
+		
+		xmlns为进入的schema的namespace
+		
+		因为引入的不是w3c的schema，所以要引入路径，schemalocation是定义的schema的文件路径，但是如果引入的不是
+		w3c的schema就要引入【http://www.w3.org/2001/XMLSchema-instance】这个schema，
+		如果引入多个schema就要起别名xml:xx xx随便写，最后xx:schemaLocation来制定这个schema作用谁。
+		
+		如果是xmlns:tt 那么该schema所定义的标签都要以tt:xx为开头。
+				
+	
+	 -->
+</tt:书架>

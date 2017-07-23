@@ -1,0 +1,39 @@
+<?xml.xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.example.org/demo" 
+		elementFormDefault="qualified">
+	<!-- 一. schema模式
+			 complex复合的
+		 二 . schema规范：
+			 	1.所有的标签和属性都要由schema定义。
+			 	2.所有的schema文件都需要有一个id，namespace。
+			 	3.namespace由targetNamespace来定义。
+			 	4.引入一个schema?
+			 	       属性：xmlns
+			 	       值：引入的schema的namespace(targetNamespace)
+			 	5.如果引入了schema不是w3c定义的，那么就要指定schema的文件位置
+			 	6.如果引入了n个schema就要定义n-1个别名
+		三.	属性介绍:
+			
+			1.elementFormDefault是一个枚举值  
+				qualified关联所有标签 
+				unqualified只关联根标签
+			2.sequence maxOccurs="unbounded"表示他下边的子标签没有限制个数	
+				
+	 -->	
+	 <element name="书架"><!-- 根节点 -->
+	    <complexType>
+	    	<sequence maxOccurs="unbounded">
+	    		<element name="书">
+	    			<complexType>
+	    				<sequence>
+	    					<element name="书名" type="String"/>
+	    					<element name="作者" type="String"/>
+	    					<element name="售价" type="String"/>
+	    				</sequence>
+	    			</complexType>
+	    		</element>
+    		</sequence>
+	    </complexType>
+	 </element>
+</schema>
