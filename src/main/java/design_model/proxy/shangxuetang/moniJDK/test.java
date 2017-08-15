@@ -27,7 +27,7 @@ public class test {
 		/*  1.拿到源码       */
 		//widow下的回车加换行
 		String rt = "\r\n";
-		String str = "package design_model.design_model.proxy.shangxuetang;"+rt+
+		String str = "package design_model.proxy.shangxuetang;"+rt+
 					 "public class TankLogProxy1 implements MoveAble{"+rt+
 				     "private MoveAble able;"+rt+
 					 "public TankLogProxy1(MoveAble able) {"+rt+
@@ -75,7 +75,7 @@ public class test {
 		try {
 			URL[] urls = new URL[]{new URL("file:/"+System.getProperty("user.dir")+"/src")};
 			URLClassLoader ul = new URLClassLoader(urls);
-			Class c = ul.loadClass("design_model.design_model.proxy.shangxuetang.TankLogProxy1");
+			Class c = ul.loadClass("design_model.proxy.shangxuetang.TankLogProxy1");
 			System.out.println(c);
 			
 			//创建对象

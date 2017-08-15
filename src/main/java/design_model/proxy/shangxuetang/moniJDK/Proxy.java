@@ -44,10 +44,10 @@ public class Proxy {
 		
 		/*  1.拿到源码       */
 		
-		String str = "package design_model.design_model.proxy.shangxuetang.moniJDK;"+rt+
+		String str = "package design_model.proxy.shangxuetang.moniJDK;"+rt+
 					 "import java.lang.reflect.Method;" + rt +
-					 "import design_model.design_model.proxy.shangxuetang.MoveAble;" + rt +
-					 "import design_model.design_model.proxy.shangxuetang.moniJDK.InvokerHandler;" + rt +
+					 "import design_model.proxy.shangxuetang.MoveAble;" + rt +
+					 "import design_model.proxy.shangxuetang.moniJDK.InvokerHandler;" + rt +
 					 "public class TimeProxy1 implements "+inf.getSimpleName()+"{"+rt+
 				     "private InvokerHandler handler;" + rt +
 					 "public TimeProxy1(InvokerHandler handler) {"+rt+
@@ -81,7 +81,7 @@ public class Proxy {
 		/*load into memory and create an instance*/
 		URL[] urls = new URL[]{new URL("file:/"+System.getProperty("user.dir")+"/src")};
 		URLClassLoader ul = new URLClassLoader(urls);
-		Class c = ul.loadClass("design_model.design_model.proxy.shangxuetang.moniJDK.TimeProxy1");
+		Class c = ul.loadClass("design_model.proxy.shangxuetang.moniJDK.TimeProxy1");
 			
 		//创建对象
 		Constructor ctr = c.getConstructor(InvokerHandler.class);
