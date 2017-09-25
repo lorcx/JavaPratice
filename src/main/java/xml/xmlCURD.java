@@ -9,15 +9,15 @@ import java.util.List;
 
 public class xmlCURD {
 //	public static void main(String[] args) throws Exception {
-//		xmlCURD xml.xml = new xmlCURD();
+//		xmlCURD xml = new xmlCURD();
 //		SAXReader reader = new SAXReader();
-//		Document document = reader.read(new File("sdmz.xml.xml"));
+//		Document document = reader.read(new File("sdmz.xml"));
 //		//���ڵ�
 //		Element root = document.getRootElement();
 //		Element element = root.element("���μ�");
 //
 //		//�ڵ�����Ա���
-//		xml.xml.listnodes(element);
+//		xml.listnodes(element);
 //
 //		Element xyj = root.element("���μ�");
 //		Attribute attr = xyj.attribute("id");
@@ -33,9 +33,9 @@ public class xmlCURD {
 //		System.out.println(b?"ɾ���ɹ�":"ɾ��ʧ��");
 //		//���cdata����
 //		xyj.addCDATA("��¥��û����");
-//		xml.xml.writer(document);
+//		xml.writer(document);
 //		System.out.println("----------------------------------");
-//		xml.xml.listnodes(element);
+//		xml.listnodes(element);
 //
 //	}
 //	/**
@@ -51,11 +51,11 @@ public class xmlCURD {
 //        // ���ñ���
 //        format.setEncoding("UTF-8");
 //        // ����XMLWriter����,ָ����д���ļ��������ʽ
-//        //src��         "src//sdml.xml.xml"
-//        XMLWriter xml.xml = new XMLWriter(new OutputStreamWriter(new FileOutputStream("sdml.xml.xml"),"UTF-8"),format);
-//        xml.xml.write(document);
-//        xml.xml.flush();
-//        xml.xml.close();
+//        //src��         "src//sdml.xml"
+//        XMLWriter xml = new XMLWriter(new OutputStreamWriter(new FileOutputStream("sdml.xml"),"UTF-8"),format);
+//        xml.write(document);
+//        xml.flush();
+//        xml.close();
 //
 //
 //

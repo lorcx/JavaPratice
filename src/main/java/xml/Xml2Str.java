@@ -11,7 +11,7 @@ import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
 /**
- * xml.xml��string֮���ת��
+ * xml��string֮���ת��
  * @author dell
  *
  */
@@ -19,7 +19,7 @@ public class Xml2Str {
 	public static void main(String[] args) throws Exception {
 		Xml2Str x = new Xml2Str();
 		SAXReader reader = new SAXReader();
-		Document document = reader.read(new File("sdmz.xml.xml"));
+		Document document = reader.read(new File("sdmz.xml"));
 		Element root = document.getRootElement();  
 		// ���ĵ�ת���ַ���
 		String xmlStr = root.asXML();
@@ -35,7 +35,7 @@ public class Xml2Str {
 		System.out.println(xyjStr);
 		System.out.println("---------------------------");  
 		
-		//ת��xml.xml
+		//ת��xml
 		Document document2 = DocumentHelper.createDocument();
 		Element abcd = document2.addElement("abcd");
 		Element java = abcd.addElement("java");

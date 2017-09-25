@@ -15,8 +15,8 @@ import org.dom4j.io.XMLWriter;
 import org.w3c.dom.Node;
 
 /**
- * dom4j����xml.xml
- * �ڶ��ֺ͵������ʺϽ��ļ�д��xml.xml
+ * dom4j����xml
+ * �ڶ��ֺ͵������ʺϽ��ļ�д��xml
  * @author dell
  *
  */
@@ -26,7 +26,7 @@ public class xmlJX {
 		/*DOM4j�У����Document����ķ�ʽ������*/
 		//1.��ȡXML�ļ�,���document����   
 		SAXReader reader = new SAXReader();
-		Document document = reader.read(new File("sdmz.xml.xml"));
+		Document document = reader.read(new File("sdmz.xml"));
 //		//2.����XML��ʽ���ı�,�õ�document����
 //		String text = "<�Ĵ�����></�Ĵ�����>";
 //		Document document1 = DocumentHelper.parseText(text);
@@ -88,14 +88,14 @@ public class xmlJX {
 		
 		/*���ĵ�д��XML�ļ�*/
 		//1.�ĵ���ȫΪӢ��,�����ñ���,ֱ��д�����ʽ.
-		XMLWriter writer = new XMLWriter(new FileWriter("sdmz.xml.xml"));
+		XMLWriter writer = new XMLWriter(new FileWriter("sdmz.xml"));
 		writer.write(document);
 		writer.close();
 		// 2.�ĵ��к�������,���ñ����ʽд�����ʽ.
 		// �����ļ������ʱ���Զ������ĸ�ʽ              
 		OutputFormat format = OutputFormat.createPrettyPrint();
 		format.setEncoding("UTF-8");
-		XMLWriter writer2 = new XMLWriter(new FileWriter("sdmz.xml.xml"),format);
+		XMLWriter writer2 = new XMLWriter(new FileWriter("sdmz.xml"),format);
 		writer2.write(document);
 		writer2.close();
 		
