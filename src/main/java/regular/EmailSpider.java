@@ -14,7 +14,7 @@ public class EmailSpider {
 
     static List<String> data = new ArrayList<String>();
 
-    static String dir = System.getProperty("user.dir") + "/src/regular.regular/";
+    static String dir = System.getProperty("user.dir") + "/src/regular/";
 
     public static void main(String[] args) {
         BufferedReader br = null;

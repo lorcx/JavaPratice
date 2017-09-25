@@ -11,7 +11,7 @@ import javax.crypto.spec.SecretKeySpec;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
-/**encrypt.encrypt(加密)
+/**encrypt(加密)
  * 
  * Symmetric(对称加密)
  * @author dell

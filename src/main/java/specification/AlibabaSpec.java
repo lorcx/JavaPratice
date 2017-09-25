@@ -1,4 +1,4 @@
-package specification.specification;// 包名小写
+package specification;// 包名小写
 
 import java.util.Objects;
 

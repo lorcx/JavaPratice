@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * regular.regular express
+ * regular express
  * 尚学堂教学
  * Created by lx on 2016/9/4.
  */
