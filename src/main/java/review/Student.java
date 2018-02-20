@@ -28,7 +28,7 @@ public class Student implements Comparable<Student> {
 
 class Test01 {
     public static void main(String[] args) {
-        Set<Student> set = new TreeSet<>();
+        Set<Student> set = new TreeSet();
         set.add(new Student("a", 1));
         set.add(new Student("b", 2));
         set.add(new Student("c", 3));
