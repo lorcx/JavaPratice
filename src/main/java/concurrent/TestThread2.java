@@ -23,7 +23,7 @@ public class TestThread2 {
 }
 
 @SuppressWarnings("unused")
-//class MyThread extends thread.Thread{
+//class MyThread extends concurrent.Thread{
 class MyThread implements Runnable{
     boolean flag = true;
     public void run() {

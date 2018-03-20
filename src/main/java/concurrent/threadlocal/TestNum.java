@@ -1,4 +1,4 @@
-package thread.threadlocal;
+package concurrent.threadlocal;
 
 public class TestNum {
     private static ThreadLocal<Integer> seqNum = new ThreadLocal<Integer>() {
