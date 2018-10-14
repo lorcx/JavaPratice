@@ -49,7 +49,7 @@ public class MQSample {
             MQQueueManager qMgr = new MQQueueManager(qManager);
 
             // Set up the options on the queue we wish to open
-            int openOptions = MQConstants.MQOO_INPUT_AS_``````````````````````````````````Q_DEF | MQConstants.MQOO_OUTPUT;
+            int openOptions = MQConstants.MQOO_INPUT_AS_Q_DEF | MQConstants.MQOO_OUTPUT;
             //int openOptions = MQConstants.MQOO_FAIL_IF_QUIESCING | MQConstants.MQOO_OUTPUT;
 
             // Now specify the queue that we wish to open and the open options
