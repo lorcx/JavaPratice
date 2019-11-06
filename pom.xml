@@ -140,6 +140,12 @@
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
 
         <!--powermock 1.6.1 必须依赖junit4.12-->
         <dependency>
