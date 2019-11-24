@@ -1,5 +1,7 @@
 package jksj.part06;
 
+import sun.util.locale.provider.FallbackLocaleProviderAdapter;
+
 /**
  * 单链表插入、查询、删除
  *
@@ -104,11 +106,48 @@ public class SinglyLinkedList {
     }
 
     public void deleteByNode(Node p) {
+        if (p == null || head == null) {
+            return;
+        }
+
+        if (p == head) {
+            head = head.next;
+            return;
+        }
+
+        Node q = head;
+        while (q != null && q.next != p) {
+            q = q.next;
+        }
+
+        if (q != null) {
+            q.next = q.next.next;
+        }
 
     }
 
     public void deleteByValue(int value) {
+        if (head == null) {
+            return;
+        }
 
+        Node p = head;
+        Node q = null;
+        while (p != null && p.value != value) {
+            q = p;
+            p = p.next;
+        }
+
+        //没有找到
+        if (p == null) {
+            return;
+        }
+
+        if (q == null) {
+            head = head.next;//删除头节点
+        } else {
+            q.next = q.next.next;//删除非头节点
+        }
     }
 
     public void printAll() {
@@ -122,12 +161,53 @@ public class SinglyLinkedList {
     }
 
     public boolean TFResult(Node left, Node right) {
-        return false;
+        Node l = left;
+        Node r = right;
+
+        boolean flag = true;
+        while (l != null && r != null) {
+            if (l.value != r.value) {
+                flag = false;
+                break;
+            }
+
+            l = l.next;
+            r = r.next;
+        }
+
+        return flag;
     }
 
     //判断是否回文
     public boolean palindrome() {
-        return false;
+        if (head == null) {
+            return false;
+        } else {
+            Node leftLink = null;
+            Node rightLink = null;
+
+            Node p = head;
+            Node q = head;
+
+            if (p.next == null) {
+                System.out.println("只有一个元素");
+                return true;
+            }
+
+            while (q.next != null && q.next.next != null) {
+                p = p.next;
+                q = q.next.next;
+            }
+
+            if (q.next == null) {//奇数节点
+                rightLink = p.next;
+                leftLink = inverseLinkList(p).next;
+            } else {//偶数节点
+                rightLink = p.next;
+                leftLink = inverseLinkList(p);
+            }
+            return TFResult(leftLink, rightLink);
+        }
     }
 
     /**
@@ -137,7 +217,24 @@ public class SinglyLinkedList {
      * @return
      */
     public Node inverseLinkList_head(Node p) {
-        return null;
+        if (p == null) {
+            return null;
+        }
+
+        Node head = new Node(999, null);
+        head.next = p;
+        Node cur = p.next;
+        p.next = null;
+        Node next = null;
+
+        while (cur != null) {
+            next = cur.next;
+            cur.next = head.next;
+            head.next = cur;
+            cur = next;
+        }
+
+        return head;
     }
 
     /**
@@ -146,8 +243,47 @@ public class SinglyLinkedList {
      * @param p
      * @return
      */
-    public Node inverseLinkList(Node p) {
-        return null;
+    /*public Node inverseLinkList(Node p) {
+        if (p == null) {
+            return null;
+        }
+
+        Node head = p;
+        Node cur = p.next;
+        p.next = null;
+        Node next = null;
+
+        while (cur != null) {
+            next = cur.next;
+            cur.next = head;
+            head = cur;
+            cur = next;
+        }
+
+        return head;
+    }
+*/
+
+    //无头结点的链表翻转
+    public Node inverseLinkList(Node p){
+
+        Node pre = null;
+        Node r = head;
+        System.out.println("z---" + r.value);
+        Node next= null;
+        while(r !=p){
+            next = r.next;
+
+            r.next = pre;
+            pre = r;
+            r = next;
+        }
+
+        r.next = pre;
+        //　返回左半部分的中点之前的那个节点
+        //　从此处开始同步像两边比较
+        return r;
+
     }
 
     public static void main(String[] args) {
@@ -177,7 +313,27 @@ public class SinglyLinkedList {
         nodex = list.findByValue(5);
         System.out.println(nodex.value);
 
+        System.out.println("-------------------------");
+        list.printAll();
+        System.out.println("删除3");
+        list.deleteByValue(3);
+        list.printAll();
+        System.out.println("删除5");
+        list.deleteByValue(5);
+        list.printAll();
+        System.out.println("删除1");
+        list.deleteByValue(1);
+        list.printAll();
+        System.out.println("---------------验证deleteByValue成功----------------");
 
+        System.out.println("_________________________回文判断_______________________");
+        SinglyLinkedList list2 = new SinglyLinkedList();
+        list2.insertToHead(3);
+        list2.insertToHead(2);
+        list2.insertToHead(2);
+        list2.insertToHead(3);
+        list2.printAll();
+        System.out.println(list2.palindrome());
     }
 
 }
