@@ -32,7 +32,7 @@ public class BookFacadeProxy implements MethodInterceptor{
 	
 	public Object intercept(Object obj, Method method, Object[] args,
 			MethodProxy Proxy) throws Throwable {
-		System.out.println("事物�?��");  
+		System.out.println("事物开始");
 		Proxy.invokeSuper(obj, args);
 		System.out.println("事物结束");  
 		return null;

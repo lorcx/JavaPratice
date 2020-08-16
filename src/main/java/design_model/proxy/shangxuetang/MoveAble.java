@@ -1,6 +1,5 @@
 package design_model.proxy.shangxuetang;
 /**
- * ÄÜÒÆ¶¯µÄ
  * @author dell
  *
  */
