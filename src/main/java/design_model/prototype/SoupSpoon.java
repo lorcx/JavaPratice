@@ -1,6 +1,6 @@
 package design_model.prototype;
 /**
- *  soup ÌÀ spoonÉ×
+ *  soup
  * @author dell
  *
  */

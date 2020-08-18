@@ -1,6 +1,6 @@
 package design_model.prototype;
 /**
- * 原型模式
+ *
  * @author dell
  *
  */

@@ -1,6 +1,6 @@
 package design_model.proxy.jingtai; 
 /** 
- * @Description: 代理�?
+ * @Description: 代理
  * @Create on: 2015-2-16 下午04:34:51
  * @Author:李欣
  * @Version:1.0

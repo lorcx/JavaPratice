@@ -1,6 +1,6 @@
 package design_model.adapter.lei; 
 /** 
- * @Description: 目标接口�?
+ * @Description: 目标接口
  * @Create on: 2015-2-26 下午02:39:49
  * @Author:李欣
  * @Version:1.0
