@@ -88,8 +88,22 @@
             <artifactId>hsqldb</artifactId>
             <version>2.4.1</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcmail-jdk15</artifactId>
+            <version>1.46</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.bouncycastle</groupId>
+                    <artifactId>bcprov-jdk15</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk16</artifactId>
+            <version>1.46</version>
+        </dependency>
         <!--powermock 1.6.1 必须依赖junit4.12-->
         <dependency>
             <groupId>org.powermock</groupId>
