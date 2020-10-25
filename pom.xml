@@ -104,6 +104,11 @@
             <artifactId>bcprov-jdk16</artifactId>
             <version>1.46</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>28.0-jre</version>
+        </dependency>
         <!--powermock 1.6.1 必须依赖junit4.12-->
         <dependency>
             <groupId>org.powermock</groupId>
